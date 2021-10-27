@@ -14,6 +14,13 @@
 .ms_btn-round {
     border-radius: 2rem;
 }
+.ms_h3 {
+    font-size: 2rem;
+}
+.ms_p {
+    font-size: .75rem;
+    font-weight: bold;
+}
 
 
 
@@ -154,4 +161,43 @@ header {
 #search-btn {
     width: 25px;
     cursor: pointer;
+}
+
+
+/* main */
+
+/* jumbo */
+.ms_bg-jumbo {
+    height: 500px;
+    background-image: url(../img/jumbo-bg.png);
+    background-position: top;
+    background-size: cover;
+    margin-bottom: 20px;
+}
+.ms_jumbo-content {
+    padding-top: 200px;
+}
+.ms_jumbo-content button {
+    background: rgb(205,61,16);
+}
+.ms_jumbo-card {
+    padding: 12px;
+    border-radius: 1rem;
+}
+.ms_jumbo-card img {
+    width: 100%;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    opacity: .7;
+    transition: .2s;
+}
+.ms_jumbo-card:first-child img {
+    border: 2px solid rgb(0,112,209);
+    padding: 3px;
+    opacity: 1;
+}
+.ms_jumbo-card img:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0 1rem .4rem rgba(0,0,0,0.3);
+    opacity: 1;
 }
