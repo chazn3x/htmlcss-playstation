@@ -1,32 +1,464 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PlayStation</title>
     <!-- Bootstrap css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- Boostrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
     <!-- Font Awesome icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Personal css -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <!-- header -->
     <header>
-        <div id="header-top" class="container-fluid bg-black text-end p-2">
+        <div id="header-top" class="bg-black text-end p-2">
             <a id="logo-sony" href="https://www.sony.it" title="www.sony.it">
                 <img src="./img/sony_logo.svg" alt="Sony logo">
             </a>
+        </div>
+        <div id="header-bottom">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                <div class="container-fluid px-0">
+                    <!-- logo -->
+                    <a class="navbar-brand order-3 ps-lg-3 order-lg-0 me-0 me-lg-3 text-center" href="index.html" title="Home">
+                        <img src="./img/play_logo.svg" alt="PlayStation logo">
+                    </a>
+                    <!-- menu e ricerca -->
+                    <div class="order-0 order-lg-3 d-flex align-items-center px-3 flex-grow-1 flex-lg-grow-0">
+                        <!-- menu -->
+                        <button id="menu-btn" class="navbar-toggler border-0 me-3 p-0" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="bi bi-list"></i>
+                        </button>
+                        <!-- ricerca -->
+                        <div id="search-btn" class="text-center">
+                            <img class="w-100" src="./img/lens.svg" alt="">
+                        </div>
+                    </div>
+                    <!-- accedi -->
+                    <div class="order-3 order-lg-2 px-3 px-lg-0 flex-grow-1 flex-lg-grow-0 text-end">
+                        <button id="login-btn" class="btn btn-dark ms_btn-round">
+                            Accedi
+                        </button>
+                    </div>
+                    <!-- menu navbar -->
+                    <div class="collapse navbar-collapse ms_navbar order-4 order-lg-1" id="navbarSupportedContent">
+                        <ul class="navbar-nav mb-2 mb-lg-0 w-100">
+                            <!-- left -->
+                            <!-- navbar item -->
+                            <li class="nav-item d-flex">
+                                <button class="ms_nav-toggle" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown"aria-expanded="false">
+                                    Giochi
+                                </button>
+                                <!-- dropdown menu -->
+                                <div class="dropdown-menu w-100 ms_dropdown mt-0" aria-labelledby="navbarDropdown">
+                                    <div class="ms_menu">
+                                        <!-- dropdown top -->
+                                        <ul class="container-lg d-flex flex-wrap justify-content-center mb-3 dropdown-top">
+                                            <li class="ms_dropdown-item">
+                                                <a href="#">
+                                                    <img src="./img/play-menu-ico.png" alt="PlayStation 5 icon">
+                                                    PS5
+                                                </a>
+                                            </li>
+                                            <li class="ms_dropdown-item">
+                                                <a href="#">
+                                                    <img src="./img/play-menu-ico.png" alt="PlayStation 5 icon">
+                                                    PS4
+                                                </a>
+                                            </li>
+                                            <li class="ms_dropdown-item">
+                                                <a href="#">
+                                                    <img src="./img/play-menu-ico.png" alt="PlayStation 5 icon">
+                                                    PS VR
+                                                </a>
+                                            </li>
+                                            <li class="ms_dropdown-item">
+                                                <a href="#">
+                                                    <img src="./img/play-menu-ico.png" alt="PlayStation 5 icon">
+                                                    PS Plus
+                                                </a>
+                                            </li>
+                                            <li class="ms_dropdown-item">
+                                                <a href="#">
+                                                    <img src="./img/play-menu-ico.png" alt="PlayStation 5 icon">
+                                                    PS Now
+                                                </a>
+                                            </li>
+                                            <li class="ms_dropdown-item">
+                                                <a href="#">
+                                                    <img src="./img/play-menu-ico.png" alt="PlayStation 5 icon">
+                                                    Compra giochi
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <hr class="dropdown-divider mx-3 mx-lg-0">
+                                        <!-- dropdown bottom -->
+                                        <ul class="ms_flex-center flex-wrap dropdown-bottom">
+                                            <li>
+                                                <a class="ms_link" href="#">PlayStation Indies</a>
+                                            </li>
+                                            <li>
+                                                <a class="ms_link" href="#">Promozioni e offerte</a>
+                                            </li>
+                                            <li>
+                                                <a class="ms_link" href="#">PlayStation Hits</a>
+                                            </li>
+                                            <li>
+                                                <a class="ms_link" href="#">PlayLink</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- navbar item -->
+                            <li class="nav-item d-flex">
+                                <button class="ms_nav-toggle" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Hardware
+                                </button>
+                                <!-- dropdown menu -->
+                                <div class="dropdown-menu w-100 ms_dropdown mt-0" aria-labelledby="navbarDropdown">
+                                    <div class="ms_menu">
+                                        <!-- dropdown top -->
+                                        <ul class="container-lg d-flex flex-wrap justify-content-center mb-3 dropdown-top">
+                                            <li class="ms_dropdown-item">
+                                                <a href="#">
+                                                    <img src="./img/play-menu-ico.png" alt="PlayStation 5 icon">
+                                                    PS5
+                                                </a>
+                                            </li>
+                                            <li class="ms_dropdown-item">
+                                                <a href="#">
+                                                    <img src="./img/play-menu-ico.png" alt="PlayStation 5 icon">
+                                                    PS4
+                                                </a>
+                                            </li>
+                                            <li class="ms_dropdown-item">
+                                                <a href="#">
+                                                    <img src="./img/play-menu-ico.png" alt="PlayStation 5 icon">
+                                                    PS Pro
+                                                </a>
+                                            </li>
+                                            <li class="ms_dropdown-item">
+                                                <a href="#">
+                                                    <img src="./img/play-menu-ico.png" alt="PlayStation 5 icon">
+                                                    PS VR
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <hr class="dropdown-divider mx-3 mx-lg-0">
+                                        <!-- dropdown bottom -->
+                                        <ul class="ms_flex-center flex-wrap dropdown-bottom">
+                                            <li>
+                                                <a class="ms_link" href="#">Controller wireless DUALSHOCK 4</a>
+                                            </li>
+                                            <li>
+                                                <a class="ms_link" href="#">Controller di movimento PlayStation Move</a>
+                                            </li>
+                                            <li>
+                                                <a class="ms_link" href="#">Gold Wireless Headset</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- navbar item -->
+                            <li class="nav-item d-flex">
+                                <button class="ms_nav-toggle" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Servizi
+                                </button>
+                                <!-- dropdown menu -->
+                                <div class="dropdown-menu w-100 ms_dropdown mt-0" aria-labelledby="navbarDropdown">
+                                    <div class="ms_menu">
+                                        <!-- dropdown top -->
+                                        <ul class="container-lg d-flex flex-wrap justify-content-center mb-3 dropdown-top">
+                                            <li class="ms_dropdown-item">
+                                                <a href="#">
+                                                    <img src="./img/play-menu-ico.png" alt="PlayStation 5 icon">
+                                                    PS Plus
+                                                </a>
+                                            </li>
+                                            <li class="ms_dropdown-item">
+                                                <a href="#">
+                                                    <img src="./img/play-menu-ico.png" alt="PlayStation 5 icon">
+                                                    PS Now
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- navbar item -->
+                            <li class="nav-item d-flex">
+                                <button class="ms_nav-toggle" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Novità
+                                </button>
+                                <!-- dropdown menu -->
+                                <div class="dropdown-menu w-100 ms_dropdown mt-0" aria-labelledby="navbarDropdown">
+                                    <div class="ms_menu">
+                                        <!-- dropdown top -->
+                                        <ul class="container-lg d-flex flex-wrap justify-content-center mb-3 dropdown-top">
+                                            <li class="ms_dropdown-item">
+                                                <a href="#">
+                                                    <img src="./img/play-menu-ico.png" alt="PlayStation 5 icon">
+                                                    PS Blog
+                                                </a>
+                                            </li>
+                                            <li class="ms_dropdown-item">
+                                                <a href="#">
+                                                    <img src="./img/play-menu-ico.png" alt="PlayStation 5 icon">
+                                                    Questo mese su PlayStation
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <hr class="dropdown-divider mx-3 mx-lg-0">
+                                        <!-- dropdown bottom -->
+                                        <ul class="ms_flex-center flex-wrap dropdown-bottom">
+                                            <li>
+                                                <a class="ms_link" href="#">Gamer Board</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- navbar item -->
+                            <li class="nav-item d-flex">
+                                <button class="ms_nav-toggle" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Fai acquisti
+                                </button>
+                                <!-- dropdown menu -->
+                                <div class="dropdown-menu w-100 ms_dropdown mt-0" aria-labelledby="navbarDropdown">
+                                    <div class="ms_menu">
+                                        <!-- dropdown top -->
+                                        <ul class="container-lg d-flex flex-wrap justify-content-center mb-3 dropdown-top">
+                                            <li class="ms_dropdown-item">
+                                                <a href="#">
+                                                    <img src="./img/play-menu-ico.png" alt="PlayStation 5 icon">
+                                                    Digital Games and Services
+                                                </a>
+                                            </li>
+                                            <li class="ms_dropdown-item">
+                                                <a href="#">
+                                                    <img src="./img/play-menu-ico.png" alt="PlayStation 5 icon">
+                                                    PS Gear
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <hr class="dropdown-divider mx-3 mx-lg-0">
+                                        <!-- dropdown bottom -->
+                                        <ul class="ms_flex-center flex-wrap dropdown-bottom">
+                                            <li>
+                                                <a class="ms_link" href="#">Acquista giochi per PS5</a>
+                                            </li>
+                                            <li>
+                                                <a class="ms_link" href="#">Acquista giochi per PS4</a>
+                                            </li>
+                                            <li>
+                                                <a class="ms_link" href="#">Acquista PlayStation Plus</a>
+                                            </li>
+                                            <li>
+                                                <a class="ms_link" href="#">Acquista PS4</a>
+                                            </li>
+                                            <li>
+                                                <a class="ms_link" href="#">Acquista PS VR</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- navbar item -->
+                            <li class="nav-item d-flex">
+                                <button class="ms_nav-toggle" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Supporto
+                                </button>
+                                <!-- dropdown menu -->
+                                <div class="dropdown-menu w-100 ms_dropdown mt-0" aria-labelledby="navbarDropdown">
+                                    <div class="ms_menu">
+                                        <!-- dropdown top -->
+                                        <ul class="container-lg d-flex flex-wrap justify-content-center mb-3 dropdown-top">
+                                            <li class="ms_dropdown-item">
+                                                <a href="#">
+                                                    <img src="./img/play-menu-ico.png" alt="PlayStation 5 icon">
+                                                    Supporto
+                                                </a>
+                                            </li>
+                                            <li class="ms_dropdown-item">
+                                                <a href="#">
+                                                    <img src="./img/play-menu-ico.png" alt="PlayStation 5 icon">
+                                                    Stato del PSN
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- right -->
+                            <!-- navbar item-->
+                            <li class="nav-item d-flex ms-lg-auto">
+                                <button class="ms_nav-toggle" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    My PlayStation
+                                </button>
+                                <!-- dropdown menu -->
+                                <div class="dropdown-menu w-100 ms_dropdown mt-0" aria-labelledby="navbarDropdown">
+                                    <div class="ms_menu">
+                                        <!-- dropdown top -->
+                                        <ul class="container-lg d-flex flex-wrap justify-content-center mb-3 dropdown-top">
+                                            <li class="ms_dropdown-item">
+                                                <a href="#">
+                                                    <img src="./img/play-menu-ico.png" alt="PlayStation 5 icon">
+                                                    Account
+                                                </a>
+                                            </li>
+                                            <li class="ms_dropdown-item">
+                                                <a href="#">
+                                                    <img src="./img/play-menu-ico.png" alt="PlayStation 5 icon">
+                                                    I miei giochi
+                                                </a>
+                                            </li>
+                                            <li class="ms_dropdown-item">
+                                                <a href="#">
+                                                    <img src="./img/play-menu-ico.png" alt="PlayStation 5 icon">
+                                                    Il mio abbonamento
+                                                </a>
+                                            </li>
+                                            <li class="ms_dropdown-item">
+                                                <a href="#">
+                                                    <img src="./img/play-menu-ico.png" alt="PlayStation 5 icon">
+                                                    Impostazioni
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </div>
     </header>
 
     <!-- main -->
     <main>
-
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae non porro reiciendis itaque eaque quis dolor harum magni illo blanditiis temporibus totam voluptatibus, dignissimos officia rerum sequi quisquam quo incidunt!
+        Tenetur qui nobis enim earum natus a provident? Cupiditate, nemo qui facere sunt provident, quaerat quo tempora aut consequatur magni minus iusto quam fuga illum? Voluptatem ducimus tempore odit incidunt.
+        Temporibus labore, quibusdam eligendi iusto, sapiente eos adipisci quis modi praesentium fugit distinctio? A sunt mollitia cupiditate velit? Laborum fugiat mollitia omnis, natus non quia? Vero commodi consectetur at eveniet.
+        Quo suscipit consectetur expedita at, aspernatur, nobis odio atque molestiae neque illo sequi voluptatem quisquam, ad ipsum animi. Hic nemo in dolorum accusantium velit asperiores maxime repudiandae delectus voluptatem nobis.
+        Ullam rerum, quibusdam dolores sit dicta dolor corporis quaerat deserunt fuga iusto expedita odit tenetur ex, ipsum ratione, minus laudantium? Tenetur quas rem dolorem non illo, nobis eum autem dignissimos!
+        Numquam recusandae suscipit, rerum fugit voluptatibus magnam debitis ullam accusantium optio porro ea ducimus, voluptas, dolorum distinctio inventore sunt eligendi ipsa velit reiciendis cumque repudiandae? In quo a delectus voluptas?
+        Ut aperiam numquam exercitationem recusandae asperiores repudiandae quidem aliquam porro facilis corporis, ullam suscipit odit libero explicabo incidunt dignissimos iure maiores. Blanditiis voluptate in accusamus aspernatur iure minus, sit atque!
+        Dolorem tempora odio obcaecati, nam provident quidem molestias nobis ea cum delectus nihil quia vel, molestiae sapiente mollitia voluptate, incidunt nostrum. Vel hic iste magni adipisci aliquid, assumenda itaque perferendis?
+        Consequatur accusantium suscipit porro aspernatur similique velit libero modi temporibus quam assumenda accusamus vel aperiam, quisquam, veniam dolor. Perspiciatis quidem mollitia voluptates odit deserunt at consequuntur, temporibus a corporis ullam.
+        Excepturi illum nisi illo ut blanditiis molestiae? Maxime fugiat saepe, corporis exercitationem ipsum amet perspiciatis non in! Vel, iure laboriosam, doloremque blanditiis quidem, facilis eos aliquam ullam molestiae sed nulla.
+        Cupiditate nostrum, ex sed dolores recusandae quas repudiandae adipisci ipsum voluptate obcaecati at labore assumenda totam voluptatibus maxime veniam ut iste ipsam iusto aperiam? Molestias blanditiis id dolorum laborum nesciunt!
+        Nihil nemo dignissimos quis ut nam temporibus illum ducimus in est velit expedita rem itaque maxime, veniam nobis cumque, consequuntur commodi, dolore eveniet fugiat ullam aliquam omnis? Atque, totam accusamus.
+        Eligendi alias voluptas repellat dignissimos placeat facilis quidem optio. Voluptatum earum delectus sint amet repellat porro quidem inventore perferendis natus blanditiis temporibus, possimus quod. Quis rem suscipit distinctio quo tempora!
+        Quia, recusandae! Quod tempore optio, necessitatibus corporis atque eaque facere reprehenderit iure iste odit accusantium architecto dolores nobis possimus dignissimos ipsa nemo ea ullam perferendis minus suscipit deleniti at excepturi!
+        Voluptatem voluptates assumenda, debitis nam expedita soluta cumque repellendus corporis et nesciunt quidem atque unde at sequi officia saepe est minus vitae alias! Architecto aspernatur eveniet obcaecati nisi nulla quas.
+        Dolor eaque ea reprehenderit doloribus. Dolorum dolores, placeat quia amet reiciendis saepe ipsum, corporis unde, officiis impedit nostrum sapiente quasi cum necessitatibus. Fugit amet optio, corporis provident aliquid magnam adipisci.
+        Itaque dolore aut iusto magnam, atque, perferendis ipsa facere cumque amet voluptate iste quibusdam? Totam dolore, ad odio tempore deleniti placeat, iusto nostrum ex quaerat est beatae optio dolorum! Officiis.
+        Ipsa fuga, voluptatem incidunt magni voluptate optio in dicta! Enim incidunt provident dolor laborum nam similique tempora, molestias numquam minima dolorum autem est! Nisi necessitatibus reprehenderit, voluptatum sunt expedita consequuntur?
+        Quas necessitatibus suscipit sit fugit eligendi mollitia quam repudiandae deserunt, eius consequuntur dolor. Repellendus ad maiores cupiditate eveniet laborum ab rerum iste quos voluptate sint, tenetur laboriosam nisi aliquid accusamus!
+        Tempore harum nisi nam omnis quos cumque ea fuga, quo, aliquid, neque tenetur unde id? Exercitationem eum soluta error sed expedita esse, sapiente quod voluptatum fugit asperiores tempora alias beatae.
+        Veritatis delectus eligendi culpa rerum voluptate dolorum nobis alias? Harum, voluptatem quasi, dolore quo optio vero, pariatur nostrum repellendus aut placeat voluptatum recusandae laboriosam nihil? Placeat debitis voluptatem architecto non.
+        Expedita aspernatur autem, corrupti nisi nihil rem pariatur veritatis provident natus eos facere eligendi illum dolore nam amet soluta, accusamus repudiandae dicta consectetur unde hic maxime sed quae in. Eum.
+        Debitis fugit facere, odio non perferendis ad illo in officia officiis nostrum fuga incidunt possimus? Harum alias delectus unde necessitatibus quos? Esse ea iusto labore nesciunt nemo commodi tempora voluptatibus.
+        Officia, quas facere. Incidunt expedita vitae dolores eaque nulla vero, dolor aliquid ipsa enim nemo aut rem autem voluptate libero iusto hic ex ipsam totam! Nam facilis inventore fugit rem.
+        Nihil aperiam ea dolor eligendi maiores, blanditiis voluptatem debitis tempora, minima officiis veniam nemo dolore labore maxime quam at fugit beatae. Nulla culpa beatae assumenda commodi minima, recusandae asperiores quibusdam.
+        Labore soluta libero exercitationem suscipit optio non accusamus nesciunt quam tempore, deleniti earum impedit minima delectus nam reprehenderit vitae voluptatem nemo, odio molestiae sit aliquid magnam quia laboriosam. Rem, maxime!
+        Dolorem neque minus ullam tenetur necessitatibus ipsum quos consequuntur unde illum nihil. Voluptate officia aspernatur similique, perspiciatis commodi sit ipsa! Odio fugit deleniti eveniet reprehenderit impedit natus aperiam nemo incidunt.
+        Illo, quae. Nulla veritatis repellendus commodi molestiae labore dicta consequuntur magni magnam quibusdam. Iure, consequatur expedita quod quos, deleniti fugit asperiores et soluta sint ipsum iusto, alias libero enim nesciunt.
+        Ducimus molestiae eius harum modi quos, corporis numquam ad vitae ipsam aspernatur accusamus a obcaecati odio excepturi perferendis quod necessitatibus corrupti sapiente error ratione? Omnis iure nesciunt totam atque maxime.
+        Cumque, voluptates? A sint maiores fugit repellendus, asperiores sit veritatis praesentium temporibus, rerum cum quisquam porro quidem tempora similique unde aliquid facilis cumque. Nostrum asperiores ipsam totam officiis tempore praesentium.
+        Amet itaque soluta quis rerum nobis repellendus vel tempore magni, expedita nisi ab iusto recusandae id praesentium nihil voluptatem aspernatur debitis tenetur excepturi nam accusantium ea quos consectetur consequatur? Corporis.
+        Deserunt qui corporis ratione perferendis aliquam reiciendis incidunt laborum iure ad! Neque laboriosam et, sint sequi, nobis necessitatibus facilis molestias minus veritatis cupiditate accusamus. Nesciunt vitae atque id accusantium maiores.
+        Ea animi, eaque accusamus nesciunt, perferendis cupiditate soluta voluptas nostrum impedit, inventore quae ipsum? Deleniti esse explicabo voluptate culpa officia ipsa velit provident eaque! Quaerat placeat eaque dicta tenetur. Fugit.
+        Ducimus quod et aliquid quas omnis doloribus harum tenetur asperiores eius? Dignissimos neque dolorum eum possimus cumque quidem et nisi tempora, facere ea aperiam obcaecati nulla excepturi nobis modi quod!
+        Obcaecati harum itaque culpa vel quaerat maiores perspiciatis neque debitis molestias quidem laborum id facere odit et blanditiis iure qui eum, commodi porro molestiae, tenetur quibusdam exercitationem recusandae pariatur? Sit.
+        Laudantium esse, sunt quia quisquam veniam inventore similique a? Recusandae itaque porro assumenda corrupti, distinctio ipsum nam dolor at doloremque fugiat! Sequi molestias numquam consequuntur repellat assumenda magni sint culpa?
+        Possimus illo temporibus dolorem totam, eos autem est, corporis pariatur dignissimos molestias fuga ducimus? Eius quos quo sed, iusto autem repudiandae fugiat exercitationem libero ab consequuntur nisi distinctio sapiente iure!
+        Velit, tempora molestias libero numquam labore, veritatis suscipit quos vel alias adipisci natus totam. Rerum voluptatibus doloribus, soluta dicta fugiat aperiam fuga tempore at et similique ut? Maxime, impedit temporibus!
+        Ipsa a saepe suscipit sunt? Asperiores, veritatis aspernatur doloremque, earum deleniti voluptate consectetur assumenda eius eum impedit aliquid suscipit unde ratione. Delectus consequuntur rem ipsam sed blanditiis maiores, temporibus odio!
+        Ullam nesciunt fuga ipsa quisquam ea, iusto temporibus, repudiandae officia nemo voluptate velit architecto quia vero nihil ipsam at ducimus obcaecati unde aspernatur perferendis excepturi modi? Minus commodi placeat explicabo?
+        Quidem saepe atque, quaerat, sed corporis quisquam ab vitae perferendis, blanditiis cum iste beatae! Et mollitia vel, quam blanditiis odio porro vitae quia tempore quae, dignissimos beatae. Aspernatur, autem fuga.
+        Autem, earum tenetur alias, et fugiat corporis quas provident unde assumenda aliquid harum iusto dignissimos sapiente ducimus facere, quis blanditiis deleniti dolor iure fugit possimus obcaecati numquam veritatis molestias. At.
+        Tempora reiciendis harum veniam placeat aperiam! Eaque ullam natus, suscipit cumque ad assumenda illo voluptas cum sequi soluta corrupti libero id odio sit fuga voluptate et praesentium placeat eius rerum?
+        Iusto voluptas amet aliquid. Veniam inventore architecto voluptates nostrum reprehenderit ratione omnis dolorem sit iusto exercitationem corporis minima officiis quod, tenetur, voluptas, iste illum voluptatum at qui eveniet doloremque. Sapiente!
+        Deleniti natus, ullam voluptas laborum ab quaerat porro, qui reiciendis est culpa, consequatur autem omnis suscipit dolore. Repellendus culpa rerum id, doloremque magni accusantium odit autem eius sunt deserunt pariatur!
+        Dolores amet tenetur beatae officiis asperiores sequi magni iusto unde fuga dolore autem, corporis natus accusantium eum ipsa consequuntur omnis commodi laudantium quisquam. Dicta assumenda distinctio aliquam laborum porro itaque.
+        Quibusdam reiciendis repudiandae, eaque cupiditate enim amet. Cumque excepturi ea facilis. Quam nobis reprehenderit quod amet quis molestiae in distinctio vero accusantium eaque natus perspiciatis repudiandae autem, enim odit. Incidunt.
+        Maiores, illum rerum debitis a, esse maxime odit magnam nesciunt similique laborum sapiente sunt modi perspiciatis suscipit aliquam in repellendus error! Perferendis vitae numquam aliquid ipsa sit, quam quas qui.
+        Nihil vitae quia quod eveniet sed exercitationem modi quaerat ipsam officiis sit, quae dolore ipsa neque earum, obcaecati alias veritatis? Velit sint vero cupiditate hic eius incidunt similique eum voluptates!
+        Earum harum fugit officia atque. Quae, error ducimus voluptatum molestias nulla ipsam architecto cumque iure. Voluptas aut quia consectetur, neque soluta consequatur aliquid assumenda delectus rerum nostrum exercitationem, doloremque hic.
+        Asperiores blanditiis facere non dolorum beatae deleniti accusamus officiis totam quas, voluptatem eos pariatur temporibus officia! Eos tenetur, magnam quas beatae provident soluta quia saepe id et eius, quisquam voluptatem!
+        Ab nobis eum numquam aut officiis iure modi, minima culpa optio ad labore, quas iusto quidem. Modi, sit, id non, voluptatibus ab in cumque eius aspernatur officiis eaque blanditiis molestiae!
+        Magnam numquam eum similique dolores at rem vero veritatis praesentium dolorum nulla quae quos fuga tempora sequi alias, mollitia aperiam quisquam hic ab? Neque maiores deserunt cumque fugit asperiores omnis?
+        Assumenda mollitia impedit, perspiciatis esse repudiandae iste deserunt vero saepe hic architecto, sint exercitationem fuga! Praesentium perspiciatis asperiores ut temporibus tenetur quis, ducimus aut obcaecati non provident. Explicabo, maxime nihil.
+        Repellat nihil deleniti ipsa dolor eveniet dolore eligendi sapiente dignissimos beatae hic architecto quaerat, deserunt repellendus provident enim officia harum culpa praesentium quam! Qui cum aperiam sequi adipisci magni numquam.
+        Illum voluptate dolor ea dolorum. Minima labore quae esse ipsum unde. Veniam aut sint corporis deleniti, consequuntur sunt numquam assumenda saepe iusto, dolore voluptatem? Culpa eos a ipsam commodi in.
+        Voluptate quos doloremque harum sint ratione quaerat, mollitia aut quam quia officia architecto, sit expedita soluta? Aperiam rem distinctio sapiente voluptatum fuga illo odio repellendus doloremque expedita nemo! Autem, repellat.
+        Maiores adipisci sint nemo eius animi quod minus, fuga in. Amet atque odit libero laborum animi inventore, tempore quae. Sunt nostrum corrupti incidunt id? Quibusdam enim accusamus pariatur dolores commodi!
+        Error dolorem possimus harum ipsa, fugiat, at temporibus vitae facere sit doloremque sequi odit mollitia quibusdam numquam pariatur quam, repellendus adipisci iure! Voluptatum, alias at nam perspiciatis perferendis officia laborum?
+        Incidunt, corrupti! Quod excepturi vel veritatis corporis magni voluptas aliquam non illo ab ratione distinctio iste necessitatibus quae, commodi iure aspernatur blanditiis sit saepe delectus deleniti quaerat porro! Quasi, odit.
+        Et, molestiae in voluptas earum aperiam nulla quos labore mollitia culpa incidunt, nemo assumenda provident maiores quas. Quos rem repellendus sapiente, laborum numquam veniam quae animi corrupti ea, veritatis voluptatem.
+        Laudantium veniam at debitis tenetur quis iusto quaerat explicabo atque sit impedit, quos eius doloremque totam placeat similique blanditiis voluptatem mollitia natus, vitae consequatur. Sint fugiat facere nesciunt quisquam provident.
+        Excepturi accusantium pariatur iusto recusandae natus odit obcaecati vitae ducimus? Voluptatibus culpa explicabo asperiores inventore minima distinctio. Ad optio, numquam nesciunt, qui sed commodi corrupti id omnis, accusamus cupiditate laborum.
+        Ullam iure unde dicta fuga provident hic magni maiores optio aperiam perferendis ratione blanditiis labore reiciendis quasi aliquam reprehenderit, dolorum quis aliquid? Repellendus deleniti laudantium quaerat optio veritatis amet architecto.
+        Soluta sed esse ex? Ea repellat aspernatur repellendus veritatis ullam minus omnis, molestiae qui nobis modi optio consectetur aut mollitia similique error distinctio impedit perferendis sunt reprehenderit ad natus vel.
+        Repellat sint eveniet recusandae doloremque rem officiis corporis id aliquam, quaerat, cum error obcaecati. Nesciunt assumenda aspernatur necessitatibus ratione tempore accusamus. Numquam nihil, vel optio repudiandae cum error molestiae harum.
+        Exercitationem, non. Saepe a ea autem eligendi magni consectetur, incidunt culpa recusandae numquam necessitatibus aut veniam aliquam repudiandae, architecto fugit nulla velit voluptatum, molestiae voluptate soluta! Voluptas voluptatibus maxime tenetur?
+        Obcaecati, omnis blanditiis voluptates dolore rem impedit odit nisi expedita beatae in. Similique, velit. Atque quas, id expedita excepturi provident, sed, distinctio doloremque veniam cupiditate velit aliquid modi fugiat inventore.
+        Officia facilis voluptas eum repellat, illo doloribus sit a aperiam voluptatum quasi placeat, magnam fuga minus quas necessitatibus atque sunt error architecto nihil laborum quam enim soluta. Aliquam, vero accusantium!
+        Perspiciatis eaque, magni similique ducimus quo pariatur natus facere officiis quae eligendi. Esse, magni quos! Voluptatibus nemo blanditiis beatae sapiente. Nisi, amet! Veritatis asperiores autem pariatur doloribus sapiente fugiat nobis!
+        Velit numquam sed reiciendis distinctio itaque voluptatem architecto dignissimos amet placeat ea sunt veritatis quod ipsa optio fugit doloremque incidunt, corporis nostrum similique sequi saepe iure voluptates voluptate assumenda? Laborum.
+        Voluptatum fugiat natus explicabo repudiandae laudantium tempora fugit voluptas officiis sint facere eum consequuntur, sunt quisquam consectetur quos voluptates, quaerat eaque quam tenetur enim quasi labore facilis nemo. Ipsa, officia.
+        Odit vitae atque quis nulla earum maxime nesciunt velit. Ducimus magnam, fuga numquam eaque assumenda ex molestias aliquam quaerat veniam incidunt delectus et, eius voluptatum! Fuga quod ad nostrum cum.
+        Laudantium vero quod repudiandae praesentium soluta magnam earum error pariatur provident voluptatum maxime ducimus ad, veniam fuga illo iste accusantium cum exercitationem! Totam eius ducimus corporis. Earum quo dicta nam.
+        Dignissimos sint recusandae, veritatis eligendi porro nostrum aut quae nihil repellendus? Impedit a rerum ipsam doloribus velit in et nobis, consequatur quia cumque culpa, ut repellat? Eum, ut! Voluptate, dolor!
+        Alias quam corporis praesentium nihil esse aliquam nemo quod, ipsa quasi cum nam dolore ea totam excepturi nostrum soluta fugiat maiores amet. Veniam nemo earum magnam, tempore eos fuga in.
+        Sapiente mollitia temporibus et exercitationem voluptas laborum sit reprehenderit placeat at voluptate, architecto soluta eos! Rerum voluptas ducimus consectetur quaerat eligendi officia, quidem aut officiis dolorem iure error est quod.
+        Explicabo animi alias exercitationem omnis illo id praesentium velit esse reprehenderit! Animi ab enim sed hic ut velit alias dolore nesciunt placeat minus, id cumque voluptate ipsa possimus facilis assumenda?
+        Voluptate vel natus a ut? Sapiente odit cumque, amet laudantium ullam aliquid dolor ipsum ipsam officiis. Reprehenderit sint doloremque culpa quas rerum magnam ex dolores in illo repellendus. Ducimus, veritatis!
+        Eum hic nam deserunt accusamus nulla quibusdam ratione odio, eos maxime minus, voluptas asperiores dicta aliquam impedit quam, recusandae suscipit sit provident repudiandae! Libero, quos quas. Similique fugiat eligendi neque.
+        Veniam nihil placeat quia alias numquam, est enim optio ullam impedit error, sequi possimus sit odio voluptatem eius iste esse aut. Vero tempore quaerat ea mollitia ratione aut cupiditate unde!
+        Aperiam unde nesciunt dicta quod delectus quas odit sunt, vitae, ipsa impedit, blanditiis illo praesentium? Reiciendis eum consectetur tenetur, perspiciatis illo ipsa alias sint, itaque vitae fuga voluptatum mollitia possimus!
+        Cupiditate reprehenderit sint deleniti, repellendus dolore temporibus nihil delectus modi odio saepe, autem ducimus vel in placeat necessitatibus cumque provident, fuga molestiae! Quisquam fugit voluptatibus sapiente, minima dicta nobis. Ut?
+        Minima laborum sunt fugiat eos enim magnam, saepe rerum ipsum, recusandae cum rem sit, repellat cupiditate. Alias amet iure laborum. Molestias maiores quo quasi ex, at asperiores nemo dolor dolores!
+        Sed ipsam hic, quos temporibus officiis nulla? At consectetur quisquam aut praesentium atque voluptas adipisci suscipit similique iusto eos, corporis tempore voluptate earum, ipsam hic enim quis numquam corrupti illo.
+        Provident assumenda ex nobis, pariatur animi eaque error maxime esse, ab tenetur cupiditate. Corporis tempora dolores quibusdam adipisci reprehenderit dicta ipsa officiis, blanditiis debitis, explicabo neque? Sit aut qui quae.
+        Aspernatur alias corporis veniam eaque, praesentium non consequuntur neque dolorem cupiditate explicabo itaque aut, vel excepturi laudantium exercitationem animi officia voluptatem. Temporibus sapiente molestiae velit vero sed saepe quasi nobis?
+        Eveniet corrupti ipsam impedit ad nihil! Eligendi, repudiandae saepe quos dicta voluptates rem modi maxime nostrum natus fuga, eaque, cupiditate et accusantium minima possimus? Porro similique tempora maxime quam dolorem!
+        Assumenda nulla molestias consequatur sequi suscipit, sapiente quae dolores illum perspiciatis et aliquid exercitationem voluptatem, soluta quaerat sit ex, debitis necessitatibus ab iste. Asperiores enim, eveniet quas labore voluptatem commodi!
+        Dolor fugit fuga nulla voluptatum inventore explicabo accusantium assumenda earum dolorum incidunt aspernatur dicta officiis placeat reprehenderit fugiat tenetur, magni repellat quasi quam excepturi illo nam unde praesentium libero. Incidunt!
+        Pariatur optio voluptas velit ullam doloribus ut facere non eveniet aperiam minima voluptatibus ratione dolorem aut laborum ipsum eaque incidunt laboriosam, et nihil sit delectus similique dicta? Magnam, aperiam voluptatibus.
+        Quod ullam totam ex facere commodi expedita laboriosam laudantium incidunt dignissimos voluptatum vel omnis, unde odit in autem non natus nemo et ab, cum ad est, fuga rerum. Perspiciatis, ducimus!
+        Culpa ipsum laboriosam sapiente accusamus harum dolorem dolorum. Esse dolorum molestias delectus eveniet quos a harum maiores qui vero, consequuntur architecto error aut veniam omnis corrupti et. Maxime, hic ad.
+        Veritatis nesciunt optio atque et sequi nobis obcaecati iure nisi magni recusandae! Mollitia, animi. Pariatur adipisci, nostrum eligendi libero cum quia saepe vel! In repellendus quibusdam voluptatum cumque voluptas illo!
+        Rem, totam blanditiis? Praesentium vel suscipit facere earum quae perferendis tempore molestias, doloribus sit consequatur voluptates tenetur eligendi maxime cum, voluptatem quisquam debitis a? Voluptates harum repellat voluptatibus expedita labore!
+        Nisi consequatur quae porro illum eos ducimus laborum, quis ipsa ex iste molestias. Ipsa quidem iusto impedit, provident fugiat libero quibusdam eligendi earum nostrum rerum, repellendus nisi soluta vitae sequi.
+        Repellendus incidunt corrupti dolor fugit tenetur. Quidem, expedita, hic qui deleniti eaque rerum id obcaecati ea alias eum quos fugiat rem mollitia repellendus eos commodi voluptatum voluptas perferendis sequi provident.
+        Quidem delectus vero doloremque illo natus animi non itaque, in vitae repudiandae repellendus amet commodi hic. Mollitia, qui consequuntur odit, repudiandae alias labore vel, asperiores obcaecati eius nam placeat reprehenderit!
+        Consequuntur commodi nam eveniet eum accusantium amet pariatur qui harum itaque. Rem nisi illum vitae ab ratione est laudantium quidem cumque maiores tempora voluptates, nemo officia animi, facilis qui molestiae.
+        Magnam, neque. Corrupti neque repudiandae quidem repellendus natus voluptate laudantium hic? Aperiam recusandae eius ipsa commodi tenetur ratione nostrum debitis dolorum in autem minus dolorem dolore laborum, expedita, et aspernatur.
     </main>
 
     <!-- footer -->
@@ -36,7 +468,10 @@
 
 
     <!-- Bootstrap script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 
 </body>
+
 </html>

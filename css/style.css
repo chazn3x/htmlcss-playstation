@@ -1,6 +1,157 @@
+/* commons */
+.ms_flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ms_link {
+    color: black;
+    text-decoration: none;
+}
+.ms_link:hover {
+    color: rgb(0,112,209);
+}
+.ms_btn-round {
+    border-radius: 2rem;
+}
+
+
+
+/* header */
+header {
+    display: unset;
+}
+/* top */
 #logo-sony {
     cursor: pointer;
 }
 #logo-sony img {
     width: 75px;
+}
+/* bottom */
+#header-bottom {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+#menu-btn i {
+    line-height: 35px;
+    color: black;
+    font-size: 35px;
+}
+.ms_nav-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: .75rem;
+}
+.ms_nav-toggle:hover,
+.ms_nav-toggle:focus {
+    color: rgb(0,112,209);
+}
+.ms_nav-toggle::after {
+    margin: 5px;
+    width: 10px;
+    height: 10px;
+    content: '';
+    background-image: url(../img/chevron-down-solid.svg);
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s;
+}
+.ms_nav-toggle:hover::after {
+    background-image: url(../img/chevron-down-solid-hover.svg);
+}
+.ms_nav-toggle:focus::after {
+    transform: rotate(180deg);
+}
+/* dropdown menu */
+.ms_dropdown {
+    list-style: none;
+    border: none;
+    box-shadow: 0 .6rem .3rem rgba(0,0,0,0.3);
+    position: absolute !important;
+    width: calc(100vw - (100vw - 100%));
+    top: 100%;
+    left: 0;
+    border-radius: 0;
+}
+.ms_dropdown li {
+    list-style: none;
+}
+.ms_dropdown-item {
+    font-size: .9rem;
+    border-radius: .3rem;
+    width: 120px;
+    margin: 0 10px;
+    text-align: center;
+}
+.ms_dropdown-item img {
+    width: 4rem;
+}
+.ms_dropdown-item a {
+    color: black;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: .5rem;
+}
+.ms_dropdown-item:hover {
+    box-shadow: 0 0 .5rem rgba(0,0,0,0.3);
+}
+.dropdown-bottom li {
+    list-style: disc;
+    color: rgb(0,112,209);
+    margin: .75rem 1.25rem;
+}
+/* dropdown menu mobile */
+@media screen and (max-width: 992px) {
+    .ms_navbar {
+        padding-top: 1.5rem;
+        box-shadow: inset 0 .25rem .25rem rgba(0,0,0,0.2);
+        min-height: calc(100vh - 60px);
+    }
+    .ms_nav-toggle {
+        width: 100%;
+        padding: 10px 15px;
+    }
+    .ms_dropdown {
+        width: 70% !important;
+        height: calc(100vh - 60px);
+        top: 60px !important;
+        left: 30% !important;
+        padding-top: 20px;
+        background: linear-gradient(rgba(255,255,255,0), white 90%);
+    }
+    .ms_menu {
+        height: 100%;
+        overflow-y: auto;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        background: white;
+    }
+    .dropdown-top {
+        justify-content: space-around !important;
+    }
+    .ms_dropdown-item {
+        width: 40%;
+        margin-bottom: 1rem;
+    }
+    .dropdown-bottom {
+        display: block;
+        padding-left: 0;
+    }
+    .dropdown-bottom li {
+        list-style: none;
+    }
+}
+#search-btn {
+    width: 25px;
+    cursor: pointer;
 }
