@@ -381,3 +381,18 @@ header {
 #deals img:hover {
     transform: scale(1.02);
 }
+
+/* playstation now */
+#psnow {
+    background: rgb(10,20,50);
+}
+#psnow .ms_btn-round {
+    background: white;
+}
+#psnow .ms_btn:hover {
+    border: 2px solid white;
+}
+#psnow p {
+    padding: 30px 0 10px;
+    color: white;
+}
