@@ -25,12 +25,26 @@
 }
 .ms_h2 {
     font-size: 2.25rem;
+    font-weight: 200;
 }
 .ms_h3 {
     font-size: 2rem;
+    font-weight: 200;
 }
 .ms_h4 {
     font-size: .75rem;
+}
+@media screen and (min-width: 768px) {
+    
+    .ms_h2 {
+        font-size: 2.5rem;
+    }
+    .ms_h3 {
+        font-size: 2rem;
+    }
+    .ms_h4 {
+        font-size: .75rem;
+    }
 }
 .ms_card {
     display: flex;
@@ -80,7 +94,6 @@ header {
     font-size: 35px;
 }
 #login-btn:hover {
-    scale: 1;
     opacity: .8;
 }
 .ms_nav-toggle {
@@ -90,7 +103,7 @@ header {
     background: transparent;
     border: none;
     outline: none;
-    font-size: .75rem;
+    font-size: .8rem;
 }
 .ms_nav-toggle:hover,
 .ms_nav-toggle:focus {
@@ -320,5 +333,5 @@ header {
     cursor: pointer;
 }
 #new-games .ms_card:hover {
-    scale: 1.01;
+    transform: scale(1.01);
 }
