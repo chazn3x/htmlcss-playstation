@@ -38,13 +38,16 @@
     flex-direction: column;
     text-align: center;
     cursor: pointer;
-    margin: 2px;
     opacity: .8;
+}
+.ms_card img {
+    width: 100%;
 }
 .ms_big-bg-image {
     height: 500px;
     background-position: top;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 .ms_gradient {
     height: 100%;
@@ -212,22 +215,22 @@ header {
 #jumbotron .ms_btn:hover {
     border: 2px solid rgb(205,61,16);
 }
-#jumbotron .ms_jumbo-card {
+#jumbotron .ms_card {
     border-radius: 1rem;
+    opacity: 1;
 }
-#jumbotron .ms_jumbo-card img {
-    width: 100%;
+#jumbotron .ms_card img {
     border-radius: 1.5rem;
     cursor: pointer;
     opacity: .7;
     transition: .2s;
 }
-#jumbotron .ms_jumbo-card:first-child img {
+#jumbotron .ms_card:first-child img {
     border: 2px solid rgb(0,112,209);
     padding: 3px;
     opacity: 1;
 }
-#jumbotron .ms_jumbo-card img:hover {
+#jumbotron .ms_card img:hover {
     transform: translateY(-1rem);
     box-shadow: 0 1rem .4rem rgba(0,0,0,0.3);
     opacity: 1;
@@ -275,6 +278,7 @@ header {
     border: 2px solid white;
     padding: 0 10px;
     transition: .2s;
+    margin: 2px;
     margin-bottom: 10px;
 }
 #ps5 .ms_card:first-child {
@@ -300,4 +304,21 @@ header {
 }
 #game-adv .ms_btn:hover {
     border: 2px solid rgb(205,61,16);
+}
+
+/* #nuove uscite */
+#new-games {
+    background: black;
+}
+#new-games .ms_card {
+    border-radius: 1rem;
+    opacity: 1;
+    transition: .2s;
+}
+#new-games .ms_card img {
+    border-radius: 1.5rem;
+    cursor: pointer;
+}
+#new-games .ms_card:hover {
+    scale: 1.01;
 }
