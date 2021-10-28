@@ -335,3 +335,20 @@ header {
 #new-games .ms_card:hover {
     transform: scale(1.01);
 }
+
+/* playstation 4 */
+#ps4 img {
+    width: 100%;
+}
+#ps4 .ms_btn-round {
+    background: rgb(44,100,230);
+}
+#ps4 .ms_btn:hover {
+    border: 2px solid rgb(44,100,230);
+}
+#ps4 p {
+    color: rgb(99,99,99);
+}
+#ps4 .ms_section-title p {
+    padding: 20px 0;
+}
