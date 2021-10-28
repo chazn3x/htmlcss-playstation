@@ -41,6 +41,15 @@
     margin: 2px;
     opacity: .8;
 }
+.ms_big-bg-image {
+    height: 500px;
+    background-position: top;
+    background-size: cover;
+}
+.ms_gradient {
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9));
+}
 
 
 
@@ -192,38 +201,33 @@ header {
 /* main */
 
 /* jumbo */
-.ms_bg-jumbo {
-    height: 500px;
+#jumbotron .ms_big-bg-image {
     background-image: url(../img/jumbo-bg.png);
-    background-position: top;
-    background-size: cover;
     margin-bottom: 20px;
-}
-.ms_jumbo-content {
     padding-top: 200px;
 }
-.ms_jumbo-content button {
+#jumbotron button {
     background: rgb(205,61,16);
 }
-.ms_jumbo-content .ms_btn:hover {
+#jumbotron .ms_btn:hover {
     border: 2px solid rgb(205,61,16);
 }
-.ms_jumbo-card {
+#jumbotron .ms_jumbo-card {
     border-radius: 1rem;
 }
-.ms_jumbo-card img {
+#jumbotron .ms_jumbo-card img {
     width: 100%;
     border-radius: 1.5rem;
     cursor: pointer;
     opacity: .7;
     transition: .2s;
 }
-.ms_jumbo-card:first-child img {
+#jumbotron .ms_jumbo-card:first-child img {
     border: 2px solid rgb(0,112,209);
     padding: 3px;
     opacity: 1;
 }
-.ms_jumbo-card img:hover {
+#jumbotron .ms_jumbo-card img:hover {
     transform: translateY(-1rem);
     box-shadow: 0 1rem .4rem rgba(0,0,0,0.3);
     opacity: 1;
@@ -284,4 +288,16 @@ header {
 #ps5 .ms_card:hover {
     opacity: 1;
     border: 2px solid rgb(44,100,230);
+}
+
+/* game adv */
+#game-adv.ms_big-bg-image {
+    background-image: url(../img/it-takes-two-hero-banner-desktop.jpg);
+    padding-top: 50px;
+}
+#game-adv button {
+    background: rgb(205,61,16);
+}
+#game-adv .ms_btn:hover {
+    border: 2px solid rgb(205,61,16);
 }
