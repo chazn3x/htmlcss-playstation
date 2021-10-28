@@ -367,3 +367,17 @@ header {
 #psplus p {
     padding: 30px 0 10px;
 }
+
+/* deals */
+#deals p {
+    color: rgb(99,99,99);
+    padding: 20px 0;
+}
+#deals img {
+    cursor: pointer;
+    transition: .2s;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.3);
+}
+#deals img:hover {
+    transform: scale(1.02);
+}
