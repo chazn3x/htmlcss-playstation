@@ -11,8 +11,19 @@
 .ms_link:hover {
     color: rgb(0,112,209);
 }
+.ms_btn {
+    border: 2px solid transparent;
+    display: inline-block;
+    border-radius: 2rem;
+    padding: 2px;
+    transition: .2s;
+}
 .ms_btn-round {
     border-radius: 2rem;
+    transition: .2s;
+}
+.ms_btn-round:hover {
+    /* scale: .96; */
 }
 .ms_h3 {
     font-size: 2rem;
@@ -45,6 +56,10 @@ header {
     line-height: 35px;
     color: black;
     font-size: 35px;
+}
+#login-btn:hover {
+    scale: 1;
+    opacity: .8;
 }
 .ms_nav-toggle {
     display: flex;
@@ -179,6 +194,9 @@ header {
 }
 .ms_jumbo-content button {
     background: rgb(205,61,16);
+}
+.ms_jumbo-content .ms_btn:hover {
+    border: 2px solid rgb(205,61,16);
 }
 .ms_jumbo-card {
     border-radius: 1rem;
