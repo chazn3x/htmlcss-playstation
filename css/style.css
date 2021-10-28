@@ -21,16 +21,25 @@
 .ms_btn-round {
     border-radius: 2rem;
     transition: .2s;
+    padding: 2px 13px;
 }
-.ms_btn-round:hover {
-    /* scale: .96; */
+.ms_h2 {
+    font-size: 2.25rem;
 }
 .ms_h3 {
     font-size: 2rem;
 }
-.ms_p {
+.ms_h4 {
     font-size: .75rem;
-    font-weight: bold;
+}
+.ms_card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+    margin: 2px;
+    opacity: .8;
 }
 
 
@@ -51,6 +60,7 @@ header {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    z-index: 9999;
 }
 #menu-btn i {
     line-height: 35px;
@@ -217,4 +227,61 @@ header {
     transform: translateY(-1rem);
     box-shadow: 0 1rem .4rem rgba(0,0,0,0.3);
     opacity: 1;
+}
+
+/* playstation 5 */
+#ps5 {
+    overflow: hidden;
+}
+#ps5 h4 {
+    color: rgb(0,112,209);
+}
+#ps5 p {
+    color: rgb(99,99,99);
+    padding: 20px 0;
+}
+#ps5 .ms_btn-round{
+    background: rgb(44,100,230);
+}
+#ps5 .ms_btn:hover {
+    border: 2px solid rgb(44,100,230);
+}
+#ps5 .ms_gallery {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+}
+#ps5 .ms_gallery::-webkit-scrollbar {
+    background: white;
+    height: 5px;
+    width: 5px;
+}
+#ps5 .ms_gallery::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 2.5px;
+}
+#ps5 .ms_gallery:hover::-webkit-scrollbar-thumb {
+    background: rgb(44,100,230);
+}
+#ps5 .ms_card {
+    max-width: 200px;
+    min-width: 100px;
+    border-radius: .75rem;
+    border: 2px solid white;
+    padding: 0 10px;
+    transition: .2s;
+    margin-bottom: 10px;
+}
+#ps5 .ms_card:first-child {
+    opacity: 1;
+    border: 2px solid rgb(44,100,230);
+}
+#ps5 .ms_card img{
+    max-width: 120px;
+    margin: 10px;
+}
+#ps5 .ms_card:hover {
+    opacity: 1;
+    border: 2px solid rgb(44,100,230);
 }
