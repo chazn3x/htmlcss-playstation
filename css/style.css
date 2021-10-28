@@ -377,6 +377,7 @@ header {
     cursor: pointer;
     transition: .2s;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,0.3);
+    border-radius: 1rem;
 }
 #deals img:hover {
     transform: scale(1.02);
@@ -395,4 +396,15 @@ header {
 #psnow p {
     padding: 30px 0 10px;
     color: white;
+}
+
+/* social */
+#social img {
+    cursor: pointer;
+    transition: .2s;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.4);
+    border-radius: 1rem;
+}
+#social img:hover {
+    transform: scale(1.02);
 }
