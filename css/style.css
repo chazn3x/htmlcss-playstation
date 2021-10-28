@@ -408,3 +408,37 @@ header {
 #social img:hover {
     transform: scale(1.02);
 }
+
+
+/* footer */
+
+footer {
+    background: rgb(0,67,156);
+    font-size: .75rem;
+}
+footer ul {
+    list-style: none;
+}
+footer li {
+    padding: 3px 0;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+}
+footer a:hover {
+    color: rgba(255,255,255,0.8);
+}
+#language {
+    cursor: pointer;
+}
+#language img {
+    width: 20px;
+    margin-right: 5px;
+}
+#footer-bottom img {
+    width: 120px;
+}
+#footer-bottom a {
+    text-decoration: underline;
+}
