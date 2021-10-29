@@ -117,6 +117,12 @@ header {
     top: 0;
     z-index: 9999;
 }
+/* tolti i bordi di bootstrap intorno ai buttons on focus */
+#menu-btn:focus,
+#login-btn:focus,
+.ms_btn-round:focus {
+    box-shadow: none;
+}
 
 /* Soluzione trovata su stackoverflow per cambiare l'icona al menu in responsive */
 #menu-btn .ms_menu-icon {
