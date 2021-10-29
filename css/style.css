@@ -88,11 +88,45 @@ header {
     top: 0;
     z-index: 9999;
 }
-#menu-btn i {
-    line-height: 35px;
-    color: black;
-    font-size: 35px;
+
+/* Soluzione trovata su stackoverflow per cambiare l'icona al menu in responsive */
+/* Quando si ricarica la pagina viene visualizzata la seconda icona, non so perchè */
+#menu-btn .ms_menu-icon {
+    display: block;
+    background-color: #000;
+    height: 3px;
+    width: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    left: 0;
+    opacity: 1;
+    transition: all 0.25s ease-out;
+    transform-origin: center left;
 }
+#menu-btn .ms_menu-icon:nth-child(1) {
+    margin-top: 0.3em;
+}
+#menu-btn:not(.collapsed) .ms_menu-icon:nth-child(1) {
+    transform: translate(15%, -33%) rotate(45deg);
+}
+#menu-btn:not(.collapsed) .ms_menu-icon:nth-child(2) {
+    opacity: 0;
+}
+#menu-btn:not(.collapsed) .ms_menu-icon:nth-child(3) {
+    transform: translate(15%, 33%) rotate(-45deg) ;
+}
+#menu-btn .ms_menu-icon:nth-child(1) {
+    transform: translate(0%, 0%) rotate(0deg) ;
+}
+#menu-btn .ms_menu-icon:nth-child(2) {
+    opacity: 1;
+}
+#menu-btn .ms_menu-icon:nth-child(3) {
+    transform: translate(0%, 0%) rotate(0deg) ;
+}
+/* fine icona menu */
+
 #login-btn:hover {
     opacity: .8;
 }
